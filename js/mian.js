@@ -36,11 +36,11 @@ createApp({
         // FUNZIONE PER AGGIUNGERE UN ELEMENTO ALLA LISTA
         addTodo(){
             if(this.newTodo.length > 0){
-                this.robanuova = {
+                this.newObject = {
                     text: this.newTodo,
                     done: false
                 }
-                this.myTodo.push(this.robanuova);
+                this.myTodo.push(this.newObject);
                 this.newTodo = '';
             }
         }

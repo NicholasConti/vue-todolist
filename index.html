@@ -24,7 +24,7 @@
     
                 </div>             
                 <div class="addmenu">
-                    <input type="text" v-model="newTodo">
+                    <input type="text" placeholder="Inserisci un todo" v-model="newTodo" @keyup.enter="addTodo">
                     <button class="add" @click="addTodo"><i class="fa-regular fa-square-plus"></i></button>
                 </div>
             </div>
