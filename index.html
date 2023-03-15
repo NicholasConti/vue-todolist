@@ -4,22 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- my css -->
     <link rel="stylesheet" href="css/style.css">
     <title>TODO-LIST</title>
 </head>
 <body>
     <div id="app">
         <div class="container">
-            <div class="list">
+            <div class="list" v-cloak>
                 <h1>My Todo List</h1>
-                <ul>
-                    <li v-for="todo in myTodo"><span :class="{done: todo.done === true}">{{ todo.text }}</span><i class="fa-regular fa-trash-can"></i></li>
+                <ul v-if="myTodo.length > 0">
+                    <!-- elementi creati con vue -->
+                    <li v-for="(todo, index) in myTodo"><span :class="{done: todo.done === true}">{{ todo.text }}</span><i class="fa-regular fa-trash-can" @click="deleteTodo(index)"></i></li>
                 </ul>
+                <div class="noelements" v-else>LA LISTA É VUOTA!</div>
             </div>
         </div>
     </div>
+    <!-- vuejs -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- my js -->
     <script src="js/mian.js"></script>
 </body>
 </html>
