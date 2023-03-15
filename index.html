@@ -24,8 +24,8 @@
     
                 </div>             
                 <div class="addmenu">
-                    <input type="text">
-                    <button class="add"><i class="fa-regular fa-square-plus"></i></button>
+                    <input type="text" v-model="newTodo">
+                    <button class="add" @click="addTodo"><i class="fa-regular fa-square-plus"></i></button>
                 </div>
             </div>
         </div>
