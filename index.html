@@ -15,11 +15,18 @@
         <div class="container">
             <div class="list" v-cloak>
                 <h1>My Todo List</h1>
-                <ul v-if="myTodo.length > 0">
-                    <!-- elementi creati con vue -->
-                    <li v-for="(todo, index) in myTodo"><span :class="{done: todo.done === true}">{{ todo.text }}</span><i class="fa-regular fa-trash-can" @click="deleteTodo(index)"></i></li>
-                </ul>
-                <div class="noelements" v-else>LA LISTA É VUOTA!</div>
+                <div class="bodylist">
+                    <ul v-if="myTodo.length > 0">
+                        <!-- elementi creati con vue -->
+                        <li v-for="(todo, index) in myTodo"><span :class="{done: todo.done === true}">{{ todo.text }}</span><i class="fa-regular fa-trash-can" @click="deleteTodo(index)"></i></li>
+                    </ul>
+                    <div class="noelements" v-else>LA LISTA É VUOTA!</div>
+    
+                </div>             
+                <div class="addmenu">
+                    <input type="text">
+                    <button class="add"><i class="fa-regular fa-square-plus"></i></button>
+                </div>
             </div>
         </div>
     </div>

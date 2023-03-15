@@ -26,11 +26,17 @@ body{
     border-radius: 20px;
     padding: 30px;
     overflow-y: auto;
+    display: flex;
+    flex-direction: column;
 }
 
 h1{
     margin-bottom: 30px;
     text-align: center;
+}
+
+.bodylist{
+    flex-grow: 1;
 }
 
 ul{
@@ -64,4 +70,21 @@ li:last-child{
     background-color: lightskyblue;
     border: 2px solid brown;
     font-weight: bold;
+}
+
+.addmenu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.addmenu input{
+    flex-grow: 1;
+    font-size: 25px;
+
+}
+.add{
+    border: none;
+    font-size: 25px;
+    margin-left: 15px;
 }
