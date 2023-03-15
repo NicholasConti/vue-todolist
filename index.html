@@ -14,6 +14,7 @@
             <div class="list">
                 <h1>My Todo List</h1>
                 <ul>
+                    <li v-for="todo in myTodo" :class="{done: todo.done === true}">{{ todo.text }}</li>
                 </ul>
             </div>
         </div>
