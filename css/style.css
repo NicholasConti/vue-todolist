@@ -59,6 +59,9 @@ li:last-child{
     display: none;
   }
 
+span, i{
+    cursor: pointer;
+}  
 .done{
     text-decoration: line-through;
 }

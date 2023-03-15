@@ -6,23 +6,23 @@ createApp({
             newTodo:'',
             myTodo: [
                 {
-                    text: 'todo1',
-                    done: true
-                },
-                {
-                    text: 'todo2',
+                    text: 'Fare la spesa',
                     done: false
                 },
                 {
-                    text: 'todo3',
+                    text: 'Pagare l\'assicurazione',
                     done: false
                 },
                 {
-                    text: 'todo4',
+                    text: 'Studiare Vue',
                     done: false
                 },
                 {
-                    text: 'todo5',
+                    text: 'Anadre in aeroporto',
+                    done: false
+                },
+                {
+                    text: 'Prenotare la visita',
                     done: false
                 }
             ]
@@ -42,6 +42,14 @@ createApp({
                 }
                 this.myTodo.push(this.newObject);
                 this.newTodo = '';
+            }
+        },
+        //FUNZIONE PER SBARRARE GLI ELEMENTI DELLA LISTA AL CLICK
+        changeDone(index, element){
+            if(this.myTodo[index].done === false){
+                this.myTodo[index].done = true;
+            } else {
+                this.myTodo[index].done = false;
             }
         }
     }
