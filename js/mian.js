@@ -36,16 +36,16 @@ createApp({
         // FUNZIONE PER AGGIUNGERE UN ELEMENTO ALLA LISTA
         addTodo(){
             if(this.newTodo.length > 0){
-                this.newObject = {
+                const newObject = {
                     text: this.newTodo,
                     done: false
                 }
-                this.myTodo.push(this.newObject);
+                this.myTodo.push(newObject);
                 this.newTodo = '';
             }
         },
         //FUNZIONE PER SBARRARE GLI ELEMENTI DELLA LISTA AL CLICK
-        changeDone(index, element){
+        changeDone(index){
             if(this.myTodo[index].done === false){
                 this.myTodo[index].done = true;
             } else {
